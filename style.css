@@ -1,0 +1,36 @@
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+body {
+
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(21, 21, 110);
+    color: wheat;
+}
