@@ -7,16 +7,35 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: overlay;
+}
+
+* {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+    color: azure;
 }
 
 
+
 body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    background-color: #6B6E70;
 
 }
 
 #navbar {
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    background-color: #6B6E70;
+    border: solid 1px black;
 }
 
 .nav-list {
@@ -25,12 +44,107 @@ body {
 
 }
 
+.nav-list a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 24px;
+    transition: transform 0.2s ease-out;
+    color: #86C232;
+}
+
+.nav-list a:hover {
+    transform: translateY(1.5px);
+    color: azure;
+}
+
 #welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(21, 21, 110);
-    color: wheat;
+    background-color: #1f2833;
+    color: #86C232;
+}
+
+.project-tile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+figure {
+    margin: 10px;
+     
+}
+
+figcaption {
+    text-align: center;
+    background-color: #1f2833;
+    padding: 10px;
+    margin-top: -10px;
+    color: #86C232;
+
+}
+
+figure:hover {
+    box-shadow: 0 0 15px black;
+}
+
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #86C232;
+    background-color: #1f2833;
+    margin-top: 15px;
+    padding: 75px;
+}
+
+.contact-details a {
+    margin: 0 20px;
+    font-size: 25px;
+    color: #86C232;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 25px;
+    
+}
+
+.contact-details :hover {
+    transform: translateY(2.5px);
+    transition: transform 0.2s ease-out;
+    color: azure;
+}
+
+
+footer {
+    background-color: #474B4F;
+    color: azure;
+    font-size: 16px;
+    padding:5px 0 5px 20px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (maxwidth: 980px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (maxwidth: 460px) {
+    html {
+        font-size: 50%;
+    }
 }
