@@ -57,6 +57,14 @@ body {
     color: azure;
 }
 
+#projects-header {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    color: azure;
+    font-size: 40px;
+}
+
 #welcome-section {
     display: flex;
     flex-direction: column;
