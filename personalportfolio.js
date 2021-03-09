@@ -1,3 +1,7 @@
 import { films } from '../data/films.js'
 
-console.log(films);
+let itemOne = document.querySelector('#item1')
+
+itemOne.textContent = 'films[0].title'
+
+console.log(films[0].title);
