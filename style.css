@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* HTML */
@@ -86,10 +87,17 @@ body {
     justify-content: center;
 }
 
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 
 /* FIGURE */
 figure {
     margin: 10px;
+    width: 500px;
      
 }
 
@@ -97,7 +105,7 @@ figcaption {
     text-align: center;
     background-color: #1f2833;
     padding: 10px;
-    margin-top: -10px;
+    margin-top: -5px;
     color: #86C232;
 
 }
