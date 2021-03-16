@@ -81,23 +81,19 @@ body {
     color: #86C232;
 }
 
-.project-tile {
+.project-tile, .movieList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.movieList {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
 
 /* FIGURE */
 figure {
-    margin: 10px;
-    width: 500px;
+    margin: 20px;
+    margin-bottom: 75px ;
+    width: 396px;
+    height: 545px;
      
 }
 
@@ -107,6 +103,7 @@ figcaption {
     padding: 10px;
     margin-top: -5px;
     color: #86C232;
+    width: 400px;
 
 }
 
