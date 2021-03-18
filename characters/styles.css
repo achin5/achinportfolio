@@ -1,3 +1,19 @@
-body {
-    background-color: burlywood;
+/* RESET */
+*{
+    margin: 0;
+    box-sizing: border-box;
 }
+
+/* MAIN */
+ #main {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+
+/* IMG SIZING */
+figure > img {
+    height: 200px;
+}
+
+
