@@ -5,7 +5,8 @@ const mainContent = document.querySelector('#main')
 people.forEach(person => {
     const charFigure = document.createElement('figure')
     const charImg = document.createElement('img')
-    charImg.src = `https://starwars-visualguide.com/assets/img/characters/1.jpg`
+    let charNum = getLastNumber(person.url)
+    charImg.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
     const charCaption = document.createElement('figcaption')
 
     charCaption.textContent = person.name
@@ -13,4 +14,14 @@ people.forEach(person => {
     charFigure.appendChild(charImg)
     charFigure.appendChild(charCaption)
     mainContent.appendChild(charFigure)
+
 })
+
+function getLastNumber(url) {
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if (url.charAt(start) === '/') {
+        start++
+    }
+    return url.slice(start, end)
+}
