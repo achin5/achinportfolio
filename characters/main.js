@@ -17,19 +17,31 @@ mainHeader.appendChild(maleButton)
 const femaleButton = document.createElement('button')
 femaleButton.textContent = 'Female Characters'
 femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
-
 mainHeader.appendChild(femaleButton)
 
+// Other Gender Button
+const otherButton = document.createElement('button')
+otherButton.textContent = 'Other Characters'
+otherButton.addEventListener('click', () => populateDOM(otherCharacters))
+mainHeader.appendChild(otherButton)
 
+// Everyones favorite Button
+const favoriteButton = document.createElement('button')
+favoriteButton.textContent = `Everyone's Favorite`
+favoriteButton.addEventListener('click', () => populateDOM(favoriteCharacters))
+
+mainHeader.appendChild(favoriteButton)
 
 // Filter
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
 const otherCharacters = people.filter(person => {
-    if (person.gender === 'n/a' || person.gender === 'none') {
+    if (person.gender === 'n/a' || person.gender === 'none' || person.gender === 'hermaphrodite') {
         return person
     }
 })
+
+const favoriteCharacters = people.filter(person => person.name === 'Jar Jar Binks')
 
 
 mainHeader.appendChild(femaleButton)
