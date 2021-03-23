@@ -1,0 +1,65 @@
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: overlay;
+}
+
+
+
+/* BODY */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    background-color: #0c0c0c;
+
+}
+
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* FIGURE */
+figure {
+    margin: 20px;
+    margin-bottom: 75px ;
+    width: 396px;
+    height: 545px;
+     
+}
+
+figcaption {
+    text-align: center;
+    background-color: #1f2833;
+    padding: 10px;
+    margin-top: -5px;
+    color: #d8d32b;
+    width: 400px;
+
+}
+
+figure:hover {
+    box-shadow: 0 0 25px rgb(199, 197, 197);
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #1f2833;
+    color: #d8d32b;
+    font-size: 16px;
+    padding:5px 0 5px 20px;
+    text-align: center;
+}

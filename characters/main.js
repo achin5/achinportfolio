@@ -7,6 +7,13 @@ const mainHeader = document.createElement('header')
 
 document.body.insertBefore(mainHeader, mainContent)
 
+// Trying Styling Through JS
+document.getElementById("myH1").style.fontSize = "50px"
+document.getElementById("myH1").style.padding = "25px"
+document.getElementById("myH1").style.backgroundColor = "darkblue"
+document.getElementById("myH1").style.marginBottom = "25px"
+
+
 // Male Button
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
@@ -43,6 +50,8 @@ const otherCharacters = people.filter(person => {
 })
 
 const favoriteCharacters = people.filter(person => person.name === 'Jar Jar Binks')
+
+
 
 
 mainHeader.appendChild(femaleButton)
