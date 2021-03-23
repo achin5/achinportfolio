@@ -5,6 +5,17 @@
 
 main {
     display: flex;
+    height: 100vh;
+}
+
+img, nav {
+    z-index: 1;
+    position: relative;
+}
+
+.message-text {
+    text-align: center;
+    
 }
 
 
