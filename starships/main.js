@@ -33,6 +33,7 @@ function populateNav() {
 function populateShipView(shipData) {
     removeChildren(shipView)
     let shipImage = document.createElement('img')
+    shipImage.className = 'imageScene'
     let shipNum = getLastNumber(shipData.url)
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
     shipImage.addEventListener('error', () =>  {
