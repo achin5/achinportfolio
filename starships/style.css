@@ -1,11 +1,11 @@
 :root {
     margin: 0;
     box-sizing: border-box;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=107668), auto;
 } 
 
 main {
     display: flex;
-    height: 100vh;
 }
 
 img, nav {
@@ -15,7 +15,7 @@ img, nav {
 
 .message-text {
     text-align: center;
-    
+
 }
 
 
