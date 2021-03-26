@@ -17,15 +17,9 @@ header {
     margin-bottom: 75px;
     z-index: 1;
     position: relative;
-    color:rgb(21, 0, 255);
-  }
-
-  .headercolor {
-      color: blanchedalmond;
   }
 
   h1 {
-      color:aqua;
       font-size: 40px;
   }
 

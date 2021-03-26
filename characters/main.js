@@ -8,9 +8,9 @@ const mainHeader = document.createElement('header')
 document.body.insertBefore(mainHeader, mainContent)
 
 // Trying Styling Through JS
-document.getElementById("myH1").style.fontSize = "50px"
-document.getElementById("myH1").style.padding = "25px"
-document.getElementById("myH1").style.backgroundColor = "darkblue"
+document.getElementById("myH1").style.fontSize = "40px"
+document.getElementById("myH1").style.padding = "30px"
+document.getElementById("myH1").style.backgroundColor = "#606060"
 document.getElementById("myH1").style.marginBottom = "25px"
 
 
@@ -35,7 +35,7 @@ mainHeader.appendChild(otherButton)
 
 // Everyones favorite Button
 const favoriteButton = document.createElement('button')
-favoriteButton.textContent = `Everyone's Favorite`
+favoriteButton.textContent = `Everyone's Favorite Character`
 favoriteButton.addEventListener('click', () => populateDOM(favoriteCharacters))
 
 mainHeader.appendChild(favoriteButton)
@@ -51,19 +51,8 @@ const otherCharacters = people.filter(person => {
 
 const favoriteCharacters = people.filter(person => person.name === 'Jar Jar Binks')
 
-
-
-
 mainHeader.appendChild(femaleButton)
 document.body.insertBefore(mainHeader, mainContent)
-
-
-
-
-
-
-
-
 
 function populateDOM(characters) {
  removeChildren(mainContent)
