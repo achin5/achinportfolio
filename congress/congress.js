@@ -30,7 +30,7 @@ function getSimplifiedPeople(peopleList) {
         return {
             id: person.id,
             name: `${person.first_name} ${person.middle_name} ${person.last_name}`,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`
         }
     })
 }
