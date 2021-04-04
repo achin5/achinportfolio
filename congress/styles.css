@@ -6,13 +6,16 @@
 .congressGrid {
     display: flex; 
     flex-wrap: wrap;
-   
+    align-items: center;
+
 }
 
 figure {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 100%;
+    align-items: center;
+
 }
 
 .figureDiv {

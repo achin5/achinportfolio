@@ -1,20 +1,20 @@
-import { senators } from "../data/senators.js"
-import { representatives } from "../data/representatives.js"
+import { senators } from '../data/senators.js'
+import { representatives } from '../data/representatives.js'
 
 const congressGrid = document.querySelector('.congressGrid')
-const seniority = document.querySelector('#seniority')
-const birthday = document.querySelector('#birthday')
+const seniorityButton = document.querySelector('#seniorityButton')
+const birthdayButton = document.querySelector('#birthdayButton')
 
-function populateCongressDiv(somearray) {
-    somearray.forEach(person => {
+function populateCongressDiv(simplifiedList) {
+    simplifiedList.forEach(person => {
         let personDiv = document.createElement('div')
         personDiv.className = 'figureDiv'
         let personFig = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
 
-        figImg.src = `https://www.govtrack.us/static/legislator-photos/412495-100px.jpeg`
-
+        figImg.src = person.imgURL
+        
         figCaption.textContent = person.name
 
         personFig.appendChild(figImg)
@@ -26,10 +26,10 @@ function populateCongressDiv(somearray) {
 
 function getSimplifiedPeople(peopleList) {
     return peopleList.map(person => {
-        let middleName = person.middle_name ? `${person.middle_name}` : ``
+        let middleName = person.middle_name ? ` ${person.middle_name}` : ``
         return {
             id: person.id,
-            name: `${person.first_name} ${person.middle_name} ${person.last_name}`,
+            name: `${person.first_name}${middleName} ${person.last_name}`,
             imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`
         }
     })
@@ -37,22 +37,21 @@ function getSimplifiedPeople(peopleList) {
 
 populateCongressDiv(getSimplifiedPeople(representatives))
 
-// const repubButton = document.querySelector('#republicans')
 
-// repubButton.addEventListener('click' , () => {
-//     showRepub()
-// })
-
-// function showRepub() {
-//     // const repubs = representatives.filter(rep => rep.party === 'R')
-//     const repubs = representatives.map (rep => {
-//         let smallRepub = {}
-//         if(rep.party === 'R'){
-          
-//                 smallRepub.id = rep.id
-//                 smallRepub.name = `${rep.first_name} ${rep.middle_name} ${rep.last_name}`
-//             }
-//             return smallRepub
-//         })
-//     console.log(repubs)
-// }
+/* const repubButton = document.querySelector('#republicans')
+repubButton.addEventListener('click', () => {
+    showRepublicans()
+})
+function showRepublicans() {
+    //const repubs = representatives.filter(rep => rep.party === 'R')
+    // TODO:  Looks like filter first then map would be best
+    const repubs = representatives.map(rep => {
+        let smallRepub = {}
+        if (rep.party === 'R') {
+                smallRepub.id = rep.id
+                smallRepub.name = `${rep.first_name} ${rep.middle_name} ${rep.last_name}`
+        }
+        return smallRepub
+    })
+    console.log(repubs)
+} */
