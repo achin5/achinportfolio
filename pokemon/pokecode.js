@@ -15,10 +15,18 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-    getAPIData(`https://pokeapi.co/api/v2/pokemon/7`).then(
+    getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25`).then(
         (data) => {
-            console.log(data)
+            for (const singlePoke of data.results) {
+                populatePokeCard(singlePoke)
+            }
         }
     )
 
+}
+
+function populatePokeCard(singlePokemon) {
+    let pokeScene = document.createElement('div')
+    let pokeCard = document.createElement('div')
+    console.log(singlePoke)
 }
