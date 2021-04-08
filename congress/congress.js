@@ -5,6 +5,10 @@ const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
 
+seniorityButton.addEventListener('click', () => {
+
+})
+
 function populateCongressDiv(simplifiedList) {
     simplifiedList.forEach(person => {
         let personDiv = document.createElement('div')
@@ -30,12 +34,16 @@ function getSimplifiedPeople(peopleList) {
         return {
             id: person.id,
             name: `${person.first_name}${middleName} ${person.last_name}`,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`,
+            seniority: parseInt(person.seniority, 10)
         }
     })
 }
 
-populateCongressDiv(getSimplifiedPeople(representatives))
+function senioritySort() {
+    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority.reverse
+
+    populateCongressDiv(getSimplifiedPeople(senators))
 
 
 /* const repubButton = document.querySelector('#republicans')
