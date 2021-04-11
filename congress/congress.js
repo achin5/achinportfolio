@@ -1,15 +1,15 @@
 import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
+import { removeChildren } from '../utils/index.js'
 
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const birthdayButton = document.querySelector('#birthdayButton')
 
-seniorityButton.addEventListener('click', () => {
-
-})
+seniorityButton.addEventListener('click', () => senioritySort())
 
 function populateCongressDiv(simplifiedList) {
+    removeChildren(congressGrid)
     simplifiedList.forEach(person => {
         let personDiv = document.createElement('div')
         personDiv.className = 'figureDiv'
@@ -18,7 +18,6 @@ function populateCongressDiv(simplifiedList) {
         let figCaption = document.createElement('figcaption')
 
         figImg.src = person.imgURL
-        
         figCaption.textContent = person.name
 
         personFig.appendChild(figImg)
@@ -41,25 +40,7 @@ function getSimplifiedPeople(peopleList) {
 }
 
 function senioritySort() {
-    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority.reverse
+    populateCongressDiv(getSimplifiedPeople(senators).sort((a, b) => a.seniority - b.seniority).reverse())
+}
 
-    populateCongressDiv(getSimplifiedPeople(senators))
-
-
-/* const repubButton = document.querySelector('#republicans')
-repubButton.addEventListener('click', () => {
-    showRepublicans()
-})
-function showRepublicans() {
-    //const repubs = representatives.filter(rep => rep.party === 'R')
-    // TODO:  Looks like filter first then map would be best
-    const repubs = representatives.map(rep => {
-        let smallRepub = {}
-        if (rep.party === 'R') {
-                smallRepub.id = rep.id
-                smallRepub.name = `${rep.first_name} ${rep.middle_name} ${rep.last_name}`
-        }
-        return smallRepub
-    })
-    console.log(repubs)
-} */
+populateCongressDiv(getSimplifiedPeople(senators))

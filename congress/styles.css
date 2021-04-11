@@ -25,6 +25,7 @@ button {
 body {
     background-color: #69899e;
     background: url(../images/flagbg.png);
+    background-repeat: repeat-y;
     height: 100%;
 }
 
