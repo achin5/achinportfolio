@@ -27,6 +27,14 @@ function loadPage() {
 
 function populatePokeCard(singlePokemon) {
     let pokeScene = document.createElement('div')
+    pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
+    pokeCard.className = 'card'
     console.log(singlePoke)
+}
+
+function populateCardFront(pokemon) {
+    let pokeFront = document.createElement('div')
+    pokeFront.className = 'card__face card__face--front'
+    let frontLabel = document.createElement
 }
