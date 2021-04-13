@@ -14,6 +14,7 @@ fetchButton.addEventListener('click', () => {
     ).catch(error => console.log(error)) 
 })
 
+
 async function getAPIData(url) {
     try {
         const response = await fetch(url) // try getting data from the API at the url provided
@@ -55,6 +56,10 @@ function populatePokeCard(singlePokemon) {
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
 }
+
+pokeCard.addEventListener('click', () => {
+    document.getElementById("myAudio").play();
+})
 
 function populateCardFront(pokemon) {
     let pokeFront = document.createElement('div')
