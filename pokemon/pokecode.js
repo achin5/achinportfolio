@@ -57,8 +57,11 @@ function populatePokeCard(singlePokemon) {
     pokeGrid.appendChild(pokeScene)
 }
 
-pokeCard.addEventListener('click', () => {
-    document.getElementById("myAudio").play();
+// Card flip sound
+const soundBtn = document.querySelector(".pokeGrid");
+let myAudio = document.querySelector('#audio');
+soundBtn.addEventListener('click', () => {
+    myAudio.play();
 })
 
 function populateCardFront(pokemon) {
