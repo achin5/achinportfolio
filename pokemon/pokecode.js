@@ -58,7 +58,7 @@ function populatePokeCard(singlePokemon) {
 }
 
 // Card flip sound
-const soundBtn = document.querySelector(".pokeGrid");
+const soundBtn = document.querySelector('.pokeGrid');
 let myAudio = document.querySelector('#audio');
 soundBtn.addEventListener('click', () => {
     myAudio.play();

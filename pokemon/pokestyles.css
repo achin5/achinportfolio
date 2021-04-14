@@ -14,8 +14,8 @@
 .scene {
     width: 200px;
     height: 260px;
-    border: 1px solid teal;
-    margin: 8px;
+    border: 1px solid;
+    margin: 15px;
     perspective: 600px;
 }
 
