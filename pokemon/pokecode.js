@@ -1,14 +1,14 @@
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const fetchButton = document.querySelector('.fetchPokemonByID')
+const newButton = document.querySelector('.newPokemon')
 
 loadButton.addEventListener('click', () => {
     loadPage()
 })
 
 fetchButton.addEventListener('click', () => {
-    let pokeId = prompt("Pokemon ID or Name:")
-    console.log(pokeId)
+    let pokeId = prompt("Pokemon ID or Name:").toLowerCase()
     getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeId}`).then(
         data => populatePokeCard(data)
     ).catch(error => console.log(error)) 
@@ -38,6 +38,31 @@ function loadPage() {
         }
     )
 }
+
+class Pokemon {
+    constructor(name, height, weight, abilities, moves) {
+        this.id = 900
+        this.name = name
+        this.height = height
+        this.weight = weight
+        this.abilities = abilities
+        this.moves = moves
+    }
+}
+
+newButton.addEventListener('click', () => {
+    let pokeName = prompt("What do you want to name your Pokemon?")
+    let pokeHeight = prompt("What is the height of your Pokemon?")
+    let pokeWeight = prompt("What is the weight of your Pokemon?")
+    let newPokemon = new Pokemon(
+        pokeName,
+        pokeHeight,
+        pokeWeight,
+        ['eat', 'sleep'],
+        ['study', 'code', 'super-silence' ]
+    )
+    populatePokeCard(newPokemon)
+})
 
 function populatePokeCard(singlePokemon) {
     // use the same html as in the CodePen Card flip example
@@ -90,6 +115,9 @@ function getImageFileName(pokemon) {
     if (pokemon.id < 10) pokeId = `00${pokemon.id}`
     if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
     if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
+    if (pokemon.id === 900){
+        return ``
+    }
 
     return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
 }
