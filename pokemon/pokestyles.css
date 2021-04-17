@@ -5,6 +5,10 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+p:first-letter {
+  text-transform: capitalize;
+}
+
 header {
     background-color: #494848;
     background-image: linear-gradient(180deg, #494848 0%, #9c9ca0 50%, #3d3c3c 100%);
@@ -101,9 +105,16 @@ body {
     margin-top: 25px;
   }
   
+
   .card__face--back {
     background: blue;
     transform: rotateY(180deg);
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content:space-evenly;
+    
   }
 
   footer {

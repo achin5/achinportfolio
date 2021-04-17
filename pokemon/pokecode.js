@@ -93,11 +93,14 @@ function populateCardFront(pokemon) {
     let pokeFront = document.createElement('div')
     pokeFront.className = 'card__face card__face--front'
     let frontLabel = document.createElement('p')
-    frontLabel.textContent = pokemon.name
+    frontLabel.textContent =  pokemon.name
+    let frontLabelId = document.createElement('p')
+    frontLabelId.textContent = `Id: ${pokemon.id}`
     let frontImage = document.createElement('img')
     frontImage.src = getImageFileName(pokemon)
     pokeFront.appendChild(frontImage)
     pokeFront.appendChild(frontLabel)
+    pokeFront.appendChild(frontLabelId)
     return pokeFront
 }
 
@@ -106,7 +109,13 @@ function populateCardBack(pokemon) {
     pokeBack.className = 'card__face card__face--back'
     let backLabel = document.createElement('p')
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
+    let backLabelStats = document.createElement('p')
+    backLabelStats.textContent = `Base Stat: ${pokemon.stats.length}`
+    let backLabelAbilities = document.createElement('p')
+    backLabelAbilities.textContent = `Abilites: ${pokemon.abilities.length}`
     pokeBack.appendChild(backLabel)
+    pokeBack.appendChild(backLabelStats)
+    pokeBack.appendChild(backLabelAbilities)
     return pokeBack
 }
 
