@@ -21,7 +21,6 @@ header {
 #returnlink {
   display: flex;
   justify-content: flex-end;
-  position: fixed;
   width: 100%;
   padding-right: 2em;
   text-decoration: none;

@@ -40,13 +40,14 @@ function loadPage() {
 }
 
 class Pokemon {
-    constructor(name, height, weight, abilities, moves) {
+    constructor(name, height, weight, abilities, moves, forms) {
         this.id = 900
         this.name = name
         this.height = height
         this.weight = weight
         this.abilities = abilities
         this.moves = moves
+        this.forms = forms
     }
 }
 
@@ -109,12 +110,15 @@ function populateCardBack(pokemon) {
     pokeBack.className = 'card__face card__face--back'
     let backLabel = document.createElement('p')
     backLabel.textContent = `Moves: ${pokemon.moves.length}`
-    let backLabelStats = document.createElement('p')
-    backLabelStats.textContent = `Base Stat: ${pokemon.stats.length}`
+    let backLabelWeight = document.createElement('p')
+    backLabelWeight.textContent = `Weight: ${pokemon.weight}`
+    let backLabelHeight = document.createElement('p')
+    backLabelHeight.textContent = `Height: ${pokemon.height}`
     let backLabelAbilities = document.createElement('p')
     backLabelAbilities.textContent = `Abilites: ${pokemon.abilities.length}`
     pokeBack.appendChild(backLabel)
-    pokeBack.appendChild(backLabelStats)
+    pokeBack.appendChild(backLabelWeight)
+    pokeBack.appendChild(backLabelHeight)
     pokeBack.appendChild(backLabelAbilities)
     return pokeBack
 }
