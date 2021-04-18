@@ -129,7 +129,7 @@ function getImageFileName(pokemon) {
     if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
     if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
     if (pokemon.id === 900){
-        return ``
+        return `../images/pokesym.png`
     }
 
     return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
