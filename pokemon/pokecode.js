@@ -73,6 +73,9 @@ function populatePokeCard(singlePokemon) {
     pokeCard.className = 'card'
     pokeCard.addEventListener('click', () => {
         pokeCard.classList.toggle('is-flipped')
+        // Card flip sound
+        let myAudio = document.querySelector('#audio')
+        myAudio.play()
     })
     // make the card front
     pokeCard.appendChild(populateCardFront(singlePokemon))
@@ -82,13 +85,6 @@ function populatePokeCard(singlePokemon) {
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
 }
-
-// Card flip sound
-const soundBtn = document.querySelector('.pokeGrid');
-let myAudio = document.querySelector('#audio');
-soundBtn.addEventListener('click', () => {
-    myAudio.play();
-})
 
 function populateCardFront(pokemon) {
     let pokeFront = document.createElement('div')
