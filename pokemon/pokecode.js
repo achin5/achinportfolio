@@ -116,6 +116,8 @@ function populateCardBack(pokemon) {
     pokeBack.appendChild(backLabelWeight)
     pokeBack.appendChild(backLabelHeight)
     pokeBack.appendChild(backLabelAbilities)
+    // Back of card img
+    // pokeBack.classList.add(pokemon.types[0].type.name)
     return pokeBack
 }
 
