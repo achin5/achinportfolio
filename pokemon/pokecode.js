@@ -48,13 +48,13 @@ function loadPage(offset, limit) {
 }
 
 class Pokemon {
-    constructor(name, height, weight, abilities, forms) {
+    constructor(name, height, weight, abilities, stats) {
         this.id = 900
         this.name = name
         this.height = height
         this.weight = weight
         this.abilities = abilities
-        this.forms = forms
+        this.stats = stats
     }
 }
 
@@ -67,8 +67,13 @@ newButton.addEventListener('click', () => {
         pokeName,
         pokeHeight,
         pokeWeight,
-        ['eat', 'sleep'],
-        ['study', 'code', 'super-silence' ]
+        ['super-silence', 'sleep'],
+        [{
+            base_stat: 999,
+            stat: {
+                name: "All Stats"
+            }
+        }]
     )
     populatePokeCard(newPokemon)
 })
@@ -127,6 +132,13 @@ function populateCardBack(pokemon) {
     pokeBack.appendChild(backLabelAbilities)
     // Back of card img
     // pokeBack.classList.add(pokemon.types[0].type.name)
+
+    pokemon.stats.forEach((stat) => {
+        let statText = document.createElement('p')
+        statText.textContent = `${stat.stat.name} : ${stat.base_stat}`
+        pokeBack.appendChild(statText)
+    })
+    
     return pokeBack
 }
 
