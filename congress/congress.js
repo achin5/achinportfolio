@@ -9,6 +9,14 @@ const birthdayButton = document.querySelector('#birthdayButton')
 
 seniorityButton.addEventListener('click', () => senioritySort())
 
+republicansButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(representatives, 'R'))
+})
+
+const filterCongressPeople = (chamber, politicalParty) => {
+    return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
+}
+
 function populateCongressDiv(simplifiedList) {
     removeChildren(congressGrid)
     simplifiedList.forEach(person => {
@@ -35,7 +43,8 @@ function getSimplifiedPeople(peopleList) {
             id: person.id,
             name: `${person.first_name}${middleName} ${person.last_name}`,
             imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-200px.jpeg`,
-            seniority: parseInt(person.seniority, 10)
+            seniority: parseInt(person.seniority, 10),
+            party: person.party,
         }
     })
 }
