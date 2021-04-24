@@ -4,6 +4,7 @@ import { removeChildren } from '../utils/index.js'
 
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
+const republicansButton = document.querySelector('#republicans')
 const birthdayButton = document.querySelector('#birthdayButton')
 
 seniorityButton.addEventListener('click', () => senioritySort())

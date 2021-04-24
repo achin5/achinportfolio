@@ -126,7 +126,6 @@ function populateCardBack(pokemon) {
     backLabelHeight.textContent = `Height: ${pokemon.height}`
     let backLabelAbilities = document.createElement('p')
     backLabelAbilities.textContent = `Abilites: ${pokemon.abilities.length}`
-    // pokeBack.appendChild(backLabel)
     pokeBack.appendChild(backLabelWeight)
     pokeBack.appendChild(backLabelHeight)
     pokeBack.appendChild(backLabelAbilities)
