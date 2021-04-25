@@ -5,7 +5,10 @@ import { removeChildren } from '../utils/index.js'
 const congressGrid = document.querySelector('.congressGrid')
 const seniorityButton = document.querySelector('#seniorityButton')
 const republicansButton = document.querySelector('#republicans')
-const birthdayButton = document.querySelector('#birthdayButton')
+const democratsButton = document.querySelector('#democrats')
+const independentsButton = document.querySelector('#independents')
+
+
 
 seniorityButton.addEventListener('click', () => senioritySort())
 
@@ -13,9 +16,18 @@ republicansButton.addEventListener('click', () => {
     populateCongressDiv(filterCongressPeople(representatives, 'R'))
 })
 
+democratsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(representatives, 'D'))
+})
+
+independentsButton.addEventListener('click', () => {
+    populateCongressDiv(filterCongressPeople(senators, 'ID'))
+})
+
 const filterCongressPeople = (chamber, politicalParty) => {
     return getSimplifiedPeople(chamber).filter(member => member.party === politicalParty)
 }
+
 
 function populateCongressDiv(simplifiedList) {
     removeChildren(congressGrid)
