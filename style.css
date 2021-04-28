@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 /* HTML */
@@ -13,9 +14,6 @@ html {
     overflow-y: overlay;
 }
 
-* {
-    text-decoration: none;
-}
 
 h1 {
     font-size: 50px;
@@ -135,6 +133,7 @@ figure:hover {
     transition: transform 0.2s ease-out;
     color: azure;
 }
+
 
 /* FOOTER */
 footer {

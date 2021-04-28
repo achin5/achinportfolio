@@ -19,6 +19,21 @@ header {
     position: relative;
   }
 
+  #returnlink {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: .5em;
+    color: rgb(65, 65, 65);
+    margin-top: -75px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  #returnlink :hover {
+    color: rgb(233, 184, 59);
+  }
+
   h1 {
       font-size: 40px;
   }
@@ -31,6 +46,7 @@ img, nav {
 img {
     align-content: stretch;
     margin-left: 28%;
+    border: 1.5px solid #35ade1;
 }
 
 .message-text {
