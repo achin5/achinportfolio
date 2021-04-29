@@ -12,9 +12,14 @@
      justify-content: space-evenly;  
  }
 
- header, h1 {
+ header {
      text-align: center;
      color: #f7ee50;
+ }
+
+ h1 {
+    text-align: center;
+    color: #f7ee50; 
  }
 
  body {
