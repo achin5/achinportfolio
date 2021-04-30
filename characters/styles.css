@@ -21,6 +21,22 @@
  h1 {
     text-align: center;
     color: #f7ee50; 
+    margin-top: -40px;
+ }
+
+ #returnlink {
+     background-color: #606060;
+     color: #f7ee50; 
+     display: flex;
+     flex-flow: row-reverse;
+     padding-right: 1em;
+     padding-top: .5em;
+     text-decoration: none;
+     font-size: 20px;
+ }
+
+ #returnlink:hover{
+     color: #f7ac50;
  }
 
  body {

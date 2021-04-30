@@ -41,6 +41,10 @@ function populateCongressDiv(simplifiedList) {
         figImg.src = person.imgURL
         figCaption.textContent = person.name
 
+        if (person.party === 'R') figCaption.style.background = '#BA3439';
+        if (person.party === 'D') figCaption.style.background = '#336ECC';
+        if (person.party === 'ID') figCaption.style.background = '#6B45A1';
+
         personFig.appendChild(figImg)
         personFig.appendChild(figCaption)
         personDiv.appendChild(personFig)
