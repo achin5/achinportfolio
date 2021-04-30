@@ -6,8 +6,13 @@
 header {
   text-align: center;
   padding: 30px;
-  background: rgb(250,242,229);
-  background: radial-gradient(circle, rgba(250,242,229,1) 5%, rgba(253,245,230,1) 62%, rgba(224,211,175,1) 96%);
+  background: rgb(250, 242, 229);
+  background: radial-gradient(
+    circle,
+    rgba(250, 242, 229, 1) 5%,
+    rgba(253, 245, 230, 1) 62%,
+    rgba(224, 211, 175, 1) 96%
+  );
   border: 1px rgb(184, 168, 143) solid;
 }
 
@@ -24,14 +29,48 @@ button {
   margin: 0 10px;
   font-size: 15px;
   font-weight: 600;
-  background: rgb(242,221,168);
-  background: linear-gradient(180deg, rgba(242,221,168,1) 27%, rgba(218,183,98,1) 83%);
-  border: .5px solid #AE8625;
+  background: rgb(242, 221, 168);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 221, 168, 1) 27%,
+    rgba(218, 183, 98, 1) 83%
+  );
+  border: 0.5px solid #ae8625;
   color: #4b3b16;
 }
 
 button:focus {
   outline: none;
+}
+
+#seniorityButton:hover {
+  color: white;
+}
+#republicans:hover {
+  color: #f20910;
+}
+
+#democrats:hover {
+  color: #134ee4;
+}
+
+#independents:hover {
+  color: purple;
+}
+
+#returnlink {
+  display: flex;
+  flex-flow: row-reverse;
+  text-decoration: none;
+  font-family: fantasy;
+  color: #0c1722;
+  font-weight: 800;
+  font-size: 1.2em;
+  margin: -20px 0 20px 0;
+}
+
+#returnlink:hover {
+  color: rgb(155, 155, 155);
 }
 
 body {
@@ -42,17 +81,16 @@ body {
 }
 
 main {
-  background-color: rgba(224,211,175,1);
+  background-color: rgba(224, 211, 175, 1);
   padding-bottom: 30%;
 }
 
 img {
-    border: 10px solid #76231c;
-    border-top: 10px solid #a93f1f;
-    border-bottom: 10px solid rgb(80, 19, 19);
-    box-shadow: 0 0 10px #000001;
+  border: 10px solid #76231c;
+  border-top: 10px solid #a93f1f;
+  border-bottom: 10px solid rgb(80, 19, 19);
+  box-shadow: 0 0 10px #000001;
 }
-
 
 #wrapper {
   max-width: 1020px;
@@ -79,12 +117,11 @@ figcaption {
   font-size: 20px;
   border-radius: 2px;
   margin-top: 8px;
-  border: 4px solid #AE8625;
-  border-top: 4px solid #DFBD69;
-  border-bottom: 4px solid #926F34;
+  border: 4px solid #ae8625;
+  border-top: 4px solid #dfbd69;
+  border-bottom: 4px solid #926f34;
   box-shadow: 0 0 10px #000001;
 }
-
 
 .figureDiv {
   margin: 1em;
