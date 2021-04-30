@@ -77,8 +77,8 @@ body {
   background-color: #69899e;
   background: url(../images/flagbg.png);
   background-repeat: repeat-y;
+  background-size: cover;
   height: 100%;
-  width: 100%;
 }
 
 main {
