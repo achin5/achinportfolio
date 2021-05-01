@@ -6,7 +6,7 @@ const fetchButton = document.querySelector('.fetchPokemonByID')
 const newButton = document.querySelector('.newPokemon')
 
 let offset = 0
-let limit = 25
+let limit = 20
 
 loadButton.addEventListener('click', () => {
     loadPage(offset, limit)
@@ -129,8 +129,7 @@ function populateCardBack(pokemon) {
     pokeBack.appendChild(backLabelWeight)
     pokeBack.appendChild(backLabelHeight)
     pokeBack.appendChild(backLabelAbilities)
-    // Back of card img
-    // pokeBack.classList.add(pokemon.types[0].type.name)
+    
 
     pokemon.stats.forEach((stat) => {
         let statText = document.createElement('p')
